@@ -1,0 +1,114 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Proxima Nova", Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  color: #000;
+}
+
+/* Kontainer utama */
+#app {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* Panel input */
+#controls {
+  flex: 1;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+#controls h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.control-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-block label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+.control-block input[type="text"],
+.control-block textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.control-block input[type="file"] {
+  font-size: 13px;
+}
+
+.control-block input[type="range"] {
+  width: 100%;
+}
+
+/* Tombol download */
+#download {
+  padding: 10px 16px;
+  border: none;
+  background: #005bbb;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+#download:hover {
+  background: #004799;
+}
+
+/* Kanvas */
+#canvasContainer {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  position: relative;
+}
+
+#canvas {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: grab;
+}
+
+#canvasContainer.grabbing #canvas {
+  cursor: grabbing;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jawa Pos Instagram Quote Generator - 2 Komentar</title>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@typehaus/metropolis/index.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Panel Kontrol -->
+    <div id="controls">
+      <h2>Upload Foto</h2>
+      <div class="control-block">
+        <label for="uploadPhotoLeft">Foto Komentar Kiri</label>
+        <input id="uploadPhotoLeft" type="file" accept="image/*">
+      </div>
+      <div class="control-block">
+        <label for="uploadPhotoRight">Foto Komentar Kanan</label>
+        <input id="uploadPhotoRight" type="file" accept="image/*">
+      </div>
+
+      <h2>Kutipan Kiri</h2>
+      <div class="control-block">
+        <label for="kutipanLeft">Kutipan</label>
+        <textarea id="kutipanLeft" placeholder="Masukkan kutipan kiri..."></textarea>
+      </div>
+      <div class="control-block">
+        <label for="namaLeft">Nama Tokoh</label>
+        <input type="text" id="namaLeft" placeholder="Nama tokoh kiri">
+      </div>
+      <div class="control-block">
+        <label for="jabatanLeft">Jabatan</label>
+        <input type="text" id="jabatanLeft" placeholder="Jabatan tokoh kiri">
+      </div>
+
+      <h2>Kutipan Kanan</h2>
+      <div class="control-block">
+        <label for="kutipanRight">Kutipan</label>
+        <textarea id="kutipanRight" placeholder="Masukkan kutipan kanan..."></textarea>
+      </div>
+      <div class="control-block">
+        <label for="namaRight">Nama Tokoh</label>
+        <input type="text" id="namaRight" placeholder="Nama tokoh kanan">
+      </div>
+      <div class="control-block">
+        <label for="jabatanRight">Jabatan</label>
+        <input type="text" id="jabatanRight" placeholder="Jabatan tokoh kanan">
+      </div>
+
+      <h2>Kontrol Zoom</h2>
+      <div class="control-block">
+        <label for="zoomLeft">Zoom Foto Kiri</label>
+        <input type="range" id="zoomLeft" min="0.5" max="3" step="0.01" value="1">
+      </div>
+      <div class="control-block">
+        <label for="zoomRight">Zoom Foto Kanan</label>
+        <input type="range" id="zoomRight" min="0.5" max="3" step="0.01" value="1">
+      </div>
+
+      <!-- Tambahan Field Kredit Foto -->
+      <h2>Kredit Foto</h2>
+      <div class="control-block">
+        <label for="kreditInput">Nama Kredit Foto</label>
+        <input type="text" id="kreditInput" placeholder="Nama fotografer...">
+      </div>
+      <div class="control-block">
+        <label for="kreditColor">Warna Teks Kredit</label>
+        <select id="kreditColor">
+          <option value="#000000">Hitam</option>
+          <option value="#FFFFFF">Putih</option>
+        </select>
+      </div>
+      <!-- End Kredit Foto -->
+
+      <button id="download">Download Hasil (JPEG)</button>
+    </div>
+
+    <!-- Preview Canvas -->
+    <div id="canvasContainer">
+      <canvas id="canvas" width="1080" height="1350"></canvas>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
